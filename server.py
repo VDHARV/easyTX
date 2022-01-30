@@ -1,20 +1,19 @@
 import socket
 
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 65535)
-print('Socket Created ')
+def conn(host_ip, port):
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 65535)
+    print('Socket Created ')
+    server_socket.bind((host_ip, port))
+    print('Waiting for conn: ')
 
-host_ip = '192.168.1.5'
-port = 9999
 
-server_socket.bind((host_ip, port))
-
-print('Waiting for conn: ')
-
-while True:
-    msg, addr = server_socket.recvfrom(65535)
-    print('GOT: ', addr)
-    for i in range(0, 10000):
-        message = str(i)
-        message = message.encode('utf-8')
-        server_socket.sendto(message, addr)
+def send(server_socket):
+    while True:
+        msg, addr = server_socket.recvfrom(65535)
+        print('GOT: ', addr)
+        # Data send 
+        # for i in range(0, 10000):
+        #     message = str(i)
+        #     message = message.encode('utf-8')
+        #     server_socket.sendto(message, addr)
