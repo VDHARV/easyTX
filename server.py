@@ -8,7 +8,7 @@ def conn(host_ip, port):
     print('Waiting for conn: ')
 
 
-def send(server_socket):
+def data(server_socket):
     while True:
         msg, addr = server_socket.recvfrom(65535)
         print('GOT: ', addr)
