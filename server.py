@@ -1,5 +1,4 @@
 import socket
-from sqlite3 import adapt
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 65535)
