@@ -6,14 +6,14 @@ def conn(host_ip, port):
     print('Socket Created ')
     server_socket.bind((host_ip, port))
     print('Waiting for conn: ')
+    return server_socket
 
 
-def data(server_socket):
-    while True:
-        msg, addr = server_socket.recvfrom(65535)
-        print('GOT: ', addr)
-        # Data send 
-        # for i in range(0, 10000):
-        #     message = str(i)
-        #     message = message.encode('utf-8')
-        #     server_socket.sendto(message, addr)
+def address(server_socket):
+    """Loop."""
+    msg, addr = server_socket.recvfrom(65535)
+    print('GOT: ', addr)
+    return addr
+
+def send(server_socket, message, addr):
+    server_socket.sendto(message, addr)   

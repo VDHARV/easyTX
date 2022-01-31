@@ -10,9 +10,11 @@ def conn(host_ip, port):
     client_socket.sendto(message, (host_ip, port))
     return client_socket
 
-def data(client_socket):
+def recv(client_socket):
     """Loop."""
     packet, _ = client_socket.recvfrom(65535)
     data = packet.decode('utf-8')
     return data
+
+
         
