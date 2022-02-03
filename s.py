@@ -1,10 +1,10 @@
-import server
+import server_data
 
-server_socket = server.conn('192.168.1.5', 9999)
+server_socket = server_data.conn('192.168.1.5', 9999)
 
 while True:
-    addr = server.address(server_socket)
+    addr = server_data.address(server_socket)
     for i in range(0, 10000):
         message = str(i)
         message = message.encode('utf-8')
-        server.send(server_socket, message, addr)
+        server_data.send(server_socket, message, addr)
