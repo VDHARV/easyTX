@@ -1,7 +1,5 @@
 # data_xchg  (Data_Transfer)
 
-[![Build Status](https://github.com/VDHARV/data_xchg.svg?branch=master)](https://github.com/VDHARV/data_xchg)
-
 data_xchg is the ultimate module to exchange data in any form (video or string) from one PC to another.
 
 Installation
