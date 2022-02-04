@@ -1,11 +1,11 @@
-# data_xchg  (Data_Transfer)
+# easyTX  (Data_Transfer)
 
-data_xchg is the ultimate module to exchange data in any form (video or string) from one PC to another.
+easyTX is the ultimate module to exchange data in any form (video or string) from one PC to another.
 
 Installation
 ============
 
-    pip install data-xchg
+    pip install easyTX
 
 The following convention is used here: 
 * the server is transmitting data
@@ -16,14 +16,14 @@ Usage
 
 server_video.py 
 
-    import data_xcfg.server as server
+    import easyTX.server as server
     server_socket = server.conn('your ip address', 'port no')
     server.frame(server_socket, 0) 
 
 client_video.py
 
     import cv2
-    import data_xcfg.client as client
+    import easyTX.client as client
     client_socket = client.conn('your ip address', 'port no)
     while True:
         frame = client.frame(client_socket)
@@ -32,7 +32,7 @@ client_video.py
         
  server_data.py
  
-    import data_xcfg.server as server
+    import easyTX.server as server
     server_socket = server.conn('your ip address', 'port no)
     while True:
         addr = server.address(server_socket)
@@ -44,7 +44,7 @@ client_video.py
             
 client_data.py
 
-    import data_xcfg.client as client
+    import easyTX.client as client
     client_socket = client.conn('your ip address', 'port no)
     while True:
       data = client.recv(client_socket)
