@@ -13,7 +13,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/VDHARV/easyTX",
     author="VDHARV",
-    author_email="vdharv4bharat.@gmail.com",
+    author_email="vdharv4bharat@gmail.com",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
