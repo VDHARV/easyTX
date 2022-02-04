@@ -1,0 +1,3 @@
+socket
+cv2
+numpy
