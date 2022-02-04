@@ -1,8 +1,0 @@
-README.md
-setup.cfg
-setup.py
-data_xcfg/data_xchg.egg-info/PKG-INFO
-data_xcfg/data_xchg.egg-info/SOURCES.txt
-data_xcfg/data_xchg.egg-info/dependency_links.txt
-data_xcfg/data_xchg.egg-info/requires.txt
-data_xcfg/data_xchg.egg-info/top_level.txt

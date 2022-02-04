@@ -5,7 +5,7 @@ data_xchg is the ultimate module to exchange data in any form (video or string) 
 Installation
 ============
 
-    pip install data_xchg
+    pip install data-xchg
 
 The following convention is used here: 
 * the server is transmitting data
@@ -16,14 +16,14 @@ Usage
 
 server_video.py 
 
-    import server
+    import data_xcfg.server as server
     server_socket = server.conn('your ip address', 'port no')
     server.frame(server_socket, 0) 
 
 client_video.py
 
     import cv2
-    import client
+    import data_xcfg.client as client
     client_socket = client.conn('your ip address', 'port no)
     while True:
         frame = client.frame(client_socket)
@@ -32,10 +32,10 @@ client_video.py
         
  server_data.py
  
-    import server_data
-    server_socket = server_data.conn('your ip address', 'port no)
+    import data_xcfg.server as server
+    server_socket = server.conn('your ip address', 'port no)
     while True:
-        addr = server_data.address(server_socket)
+        addr = server.address(server_socket)
         for i in range(0, 10000):
             message = str(i)
             message = message.encode('utf-8')
@@ -44,8 +44,8 @@ client_video.py
             
 client_data.py
 
-    import client_video
-    client_socket = client_video.conn('your ip address', 'port no)
+    import data_xcfg.client as client
+    client_socket = client.conn('your ip address', 'port no)
     while True:
-      data = client_video.recv(client_socket)
+      data = client.recv(client_socket)
       print(data)
